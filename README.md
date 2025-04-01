@@ -158,6 +158,7 @@ default:
           provider: credential_chain
           scope: [ "s3://bucket-in-eu-region", "s3://bucket-2-in-eu-region" ]
           region: "eu-central-1"
+          persistent: true # this will persist the credentials in the duckdb file
         - type: s3
           region: us-west-2
           scope: "s3://bucket-in-us-region"

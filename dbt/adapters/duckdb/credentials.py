@@ -185,6 +185,7 @@ class DuckDBCredentials(Credentials):
             self._secrets = [
                 Secret.create(
                     secret_type=secret.pop("type"),
+                    persistent=secret.pop("persistent", False),
                     name=secret.pop("name", f"{DEFAULT_SECRET_PREFIX}{num + 1}"),
                     **secret,
                 )
